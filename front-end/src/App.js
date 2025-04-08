@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import ProjectList from './components/ProjectList';
-import ProjectForm from './components/ProjectForm';
-import ProjectDetails from './components/ProjectDetails';
+import AppRouter from './Router';
 import './styles/App.css';
 
 function App() {
@@ -144,35 +141,15 @@ function App() {
     <div className='app-container'>
       <Header onRemoveProjects={removeProjects} />
       {error && <div className='error-message'>{error}</div>}
-      <Routes>
-        <Route
-          path='/'
-          element={
-            <ProjectList
-              projects={projects}
-              loading={loading}
-              refreshProjects={fetchProjects}
-            />
-          }
-        />
-        <Route
-          path='/add-project'
-          element={<ProjectForm addProject={addProject} />}
-        />
-        <Route path='/' element={<ProjectForm addProject={removeProjects} />} />
-        <Route
-          path='/projects/:projectId'
-          element={
-            <ProjectDetails
-              projects={projects}
-              addTask={addTask}
-              loading={loading}
-            />
-          }
-        />
-      </Routes>
+      <AppRouter
+        projects={projects}
+        loading={loading}
+        refreshProjects={fetchProjects}
+        addProject={addProject}
+        addTask={addTask}
+      />
       <footer className='app-footer'>
-        <p>© 2025 Project Manager</p>
+        <p>© 2025 Filipe Silva</p>
       </footer>
     </div>
   );

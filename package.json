@@ -10,6 +10,6 @@
     "start:backend": "dotnet run --project back-end/back-end.csproj",
     "start:frontend": "npm start --prefix front-end",
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
-    "clean": "rm -rf package-lock.json node_modules ./back-end/bin ./back-end/obj ./back-end/construction.db ./back-end/Migrations/*.cs ./back-end/Migrations/*.Designer.cs ./back-end/Migrations/*.Snapshot.cs ./front-end/node_modules ./front-end/build ./front-end/dist ./front-end/.cache"
+    "clean": "rm -rf Project-Tracker.sln package-lock.json node_modules back-end/bin ./back-end/obj ./back-end/construction.db ./back-end/Migrations/*.cs ./back-end/Migrations/*.Designer.cs ./back-end/Migrations/*.Snapshot.cs ./front-end/node_modules ./front-end/build ./front-end/dist ./front-end/.cache"
   }
 }
