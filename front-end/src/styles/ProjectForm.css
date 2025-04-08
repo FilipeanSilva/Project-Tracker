@@ -1,0 +1,86 @@
+/* ProjectForm.css */
+
+.project-form-container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+  
+  .project-form-container h2 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  .project-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-color);
+  }
+  
+  .form-group input {
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .input-error {
+    border-color: var(--danger-color) !important;
+  }
+  
+  .error-text {
+    color: var(--danger-color);
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  
+  .form-actions button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 600px) {
+    .project-form-container {
+      padding: 20px;
+      margin: 20px;
+    }
+    
+    .form-actions {
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
+    
+    .form-actions button {
+      width: 100%;
+    }
+  }

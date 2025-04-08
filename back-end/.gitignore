@@ -1,0 +1,83 @@
+# Build Folders
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Build Results
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Database Files
+*.db
+
+# Migrations output (optional to ignore if you want to track migrations)
+# **/Migrations/
+
+# dotnet CLI
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet Packages
+*.nupkg
+# NuGet v3
+*.snupkg
+# The packages folder can be ignored because of PackageReference
+**/packages/
+# Used if your system has package restore issues
+*.nuget.props
+*.nuget.targets
+
+# Entity Framework
+*.dbmdl
+
+# Publish directory
+**/publish/
+**/out/
+
+# Static Assets
+**/staticwebassets/
+
+# Global tools
+.dotnet_tool/
+
+# Logs
+*.log
+*.tlog
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Others
+*.swp
+/Migrations/*

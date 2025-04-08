@@ -1,0 +1,162 @@
+/* ProjectList.css */
+
+.project-list-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+  
+  .project-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .project-list-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  .project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  
+  .project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-color);
+  }
+  
+  .project-dates {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--light-text);
+    margin-bottom: 16px;
+  }
+  
+  .date-label {
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  .project-status {
+    margin-bottom: 16px;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .status-not-started {
+    background-color: #e8f4fd;
+    color: #3498db;
+  }
+  
+  .status-in-progress {
+    background-color: #fff8e1;
+    color: #f39c12;
+  }
+  
+  .status-completed {
+    background-color: #e8f5e9;
+    color: #2ecc71;
+  }
+  
+  .progress-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .progress-bar {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #eee;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+  }
+  
+  .progress-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--light-text);
+  }
+  
+  .project-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--light-text);
+    margin-bottom: 16px;
+  }
+  
+  .task-count i {
+    margin-right: 5px;
+  }
+  
+  .project-card .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Empty state styling */
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+  
+  .empty-state h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--text-color);
+  }
+  
+  .empty-state p {
+    font-size: 16px;
+    color: var(--light-text);
+    margin-bottom: 24px;
+  }
+  
+  .empty-state .btn {
+    padding: 10px 20px;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .project-cards {
+      grid-template-columns: 1fr;
+    }
+  }

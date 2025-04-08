@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "scripts": {
+    "install:backend": "dotnet build --project back-end/back-end.csproj",
+    "install:frontend": "npm install --prefix front-end",
+    "install:All": "concurrently \"npm run install:backend\" \"npm run install:frontend\"",
+    "setup": "npm install && npm run install:All",
+    "start:backend": "dotnet run --project back-end/back-end.csproj",
+    "start:frontend": "npm start --prefix front-end",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "clean": "rm -rf package-lock.json node_modules ./back-end/bin ./back-end/obj ./back-end/construction.db ./back-end/Migrations/*.cs ./back-end/Migrations/*.Designer.cs ./back-end/Migrations/*.Snapshot.cs ./front-end/node_modules ./front-end/build ./front-end/dist ./front-end/.cache"
+  }
+}

@@ -1,0 +1,109 @@
+/* Header.css */
+
+.header {
+  background-color: white;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70px;
+}
+
+.logo h1 {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-left: 24px;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.remove-projects-btn {
+  background-color: #ff3b30;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link.remove-projects-btn::after {
+  display: none;
+}
+
+.nav-link.remove-projects-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .nav-menu {
+    margin-top: 15px;
+  }
+
+  .nav-menu li {
+    margin-left: 16px;
+  }
+
+  .nav-menu li:first-child {
+    margin-left: 0;
+  }
+}
